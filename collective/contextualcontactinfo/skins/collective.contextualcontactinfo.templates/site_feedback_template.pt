@@ -19,7 +19,7 @@ The message sent was:
 </div>
 
 <div i18n:translate="label_come_from" tal:omit-tag="" tal:condition="options/came_from|nothing">
-	L'utente proviene dalla pagina:
+	The user comes from the page:
 	<span i18n:name="came_from" tal:omit-tag="" tal:content="options/came_from | nothing" />
 </div>
 
