@@ -148,6 +148,8 @@
                     tal:content="request/message|nothing"
                     > </textarea>
         </div>
+        
+        <input type="hidden" name="came_from" value="" tal:attributes="value request/came_from|nothing"/>
     
         <div class="formControls">
 

@@ -17,6 +17,12 @@ The message sent was:
 <span i18n:name="message" tal:omit-tag="" tal:content="options/message | nothing" />
 
 </div>
+
+<div i18n:translate="label_come_from" tal:omit-tag="">
+	L'utente proviene dalla pagina:
+	<span i18n:name="came_from" tal:omit-tag="" tal:content="options/came_from | nothing" />
+</div>
+
 -- 
 <span tal:replace="portal/email_from_name" />
 
