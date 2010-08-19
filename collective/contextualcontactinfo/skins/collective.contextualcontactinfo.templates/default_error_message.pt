@@ -46,7 +46,8 @@
                 contact the <span i18n:name="site_admin">
                 <a href="#" 
                    i18n:translate="label_site_admin"
-                   tal:attributes="href string:${portal_url}/contact-info">Site Administration</a></span>.
+                   tal:define="came_from request/form/came_from|request/URL"
+                   tal:attributes="href string:${portal_url}/contact-info?came_from=${came_from}">Site Administration</a></span>.
                 </p>
 
                 <p i18n:translate="description_site_error_thank_you">
@@ -148,9 +149,10 @@
                    i18n:translate="description_include_error_in_admin_message">
                 If you need to report this to the 
                 <span i18n:name="site_admin">
-                <a href="#" 
+                <a href="#"
                    i18n:translate="label_site_admin"
-                   tal:attributes="href string:${portal_url}/contact-info?subject=Error ${err_log_id}">Site Administration</a></span>,
+                   tal:define="came_from request/form/came_from|request/URL"
+                   tal:attributes="href string:${portal_url}/contact-info?subject=Error ${err_log_id}&came_from=${came_from}">Site Administration</a></span>,
                 please include this entry number in your message.
                 </p>
             
@@ -172,7 +174,8 @@
                 contact the <span i18n:name="site_admin">
                 <a href="#" 
                    i18n:translate="label_site_admin"
-                   tal:attributes="href string:${portal_url}/contact-info">Site Administration</a></span>.
+                   tal:define="came_from request/form/came_from|request/URL"
+                   tal:attributes="href string:${portal_url}/contact-info?came_from=${came_from}">Site Administration</a></span>.
                 </p>
             </tal:noentry>
 
