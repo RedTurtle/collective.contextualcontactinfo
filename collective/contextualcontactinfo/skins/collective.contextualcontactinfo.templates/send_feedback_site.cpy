@@ -41,16 +41,20 @@ host = context.MailHost # plone_utils.getMailHost() (is private)
 encoding = portal.getProperty('email_charset')
 
 variables = {'sender_from_address' : sender_from_address,
-             'sender_fullname'     : sender_fullname,             
+             'sender_fullname'     : sender_fullname,
              'url'                 : url,
              'subject'             : subject,
              'message'             : message,
-             'came_from'		   : came_from,
+             'came_from'		   : came_from
              }
-             
+
 try:
     message = context.site_feedback_template(context, **variables)
-    result = host.secureSend(message, send_to_address, envelope_from, subject=subject, subtype='plain', charset=encoding, debug=False, From=sender_from_address)
+    try:
+		result = host.send(message.encode(encoding), send_to_address, envelope_from,
+                       	   subject=subject, charset=encoding)
+    except:
+		result = host.secureSend(message, send_to_address, envelope_from, subject=subject, subtype='plain', charset=encoding, debug=False, From=sender_from_address)
 except ConflictError:
     raise
 except: # TODO Too many things could possibly go wrong. So we catch all.
