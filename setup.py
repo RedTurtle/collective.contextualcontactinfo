@@ -5,7 +5,7 @@ version = '0.1.0'
 
 setup(name='collective.contextualcontactinfo',
       version=version,
-      description="",
+      description="Add the information about the context in contact-info message of your Plone Site",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -17,10 +17,10 @@ setup(name='collective.contextualcontactinfo',
         "Framework :: Plone :: 4.1",
         "Programming Language :: Python",
         ],
-      keywords='',
+      keywords='contact-info plonegov message',
       author='RedTurtle Technology',
       author_email='sviluppoplone@redturtle.it',
-      url='http://svn.plone.org/svn/collective/',
+      url='http://plone.org/products/collective.contextualcontactinfo',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
