@@ -12,7 +12,7 @@ REQUEST=context.REQUEST
 
 from Products.CMFPlone.utils import transaction_note
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone import PloneMessageFactory as _
+from Products.CMFPlone import PloneMessageFactory as pmf
 from ZODB.POSException import ConflictError
 
 ##
@@ -59,7 +59,7 @@ except ConflictError:
     raise
 except: # TODO Too many things could possibly go wrong. So we catch all.
     exception = plone_utils.exceptionString()
-    message = _(u'Unable to send mail: ${exception}',
+    message = pmf(u'Unable to send mail: ${exception}',
                 mapping={u'exception' : exception})
     plone_utils.addPortalMessage(message, 'error')
     return state.set(status=state_failure)
@@ -71,5 +71,5 @@ REQUEST.set('sender_from_address', None)
 REQUEST.set('sender_fullname', None)
 REQUEST.set('came_from', None)
 
-plone_utils.addPortalMessage(_(u'Mail sent.'))
+plone_utils.addPortalMessage(pmf(u'Mail sent.'))
 return state

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-06-13 16:01+0000\n"
+"POT-Creation-Date: 2012-06-15 08:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +16,6 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.contextualcontactinfo\n"
-
-#: ./skins/collective.contextualcontactinfo.templates/send_feedback_site.cpy:74
-msgid "Mail sent."
-msgstr ""
-
-#: ./skins/collective.contextualcontactinfo.templates/send_feedback_site.cpy:62
-msgid "Unable to send mail: ${exception}"
-msgstr ""
 
 #. Default: "The user comes from the page: ${came_from}"
 #: ./skins/collective.contextualcontactinfo.templates/site_feedback_template.pt:24
